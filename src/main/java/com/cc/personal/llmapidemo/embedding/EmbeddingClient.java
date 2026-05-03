@@ -1,5 +1,6 @@
 package com.cc.personal.llmapidemo.embedding;
 
+import com.cc.personal.llmapidemo.constant.Constant;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -14,7 +15,7 @@ import java.util.Map;
 
 public class EmbeddingClient {
 
-    private static final String API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings";
+    private static final String API_URL = Constant.EMBEDDING_API_URL;
     private static final String MODEL = "text-embedding-v3";
 
     private final String apiKey;

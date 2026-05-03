@@ -1,5 +1,6 @@
 package com.cc.personal.llmapidemo.hybrid;
 
+import com.cc.personal.llmapidemo.constant.Constant;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -12,8 +13,8 @@ import java.util.List;
 
 public class AliyunRerankDemo {
 
-    private static final String API_KEY = "sk-31f62dc869f14c1686c2e933acd65aa4";
-    private static final String RERANK_URL = "https://dashscope.aliyuncs.com/compatible-api/v1/reranks";
+//    private static final String API_KEY = "sk-31f62dc869f14c1686c2e933acd65aa4";
+    private static final String RERANK_URL = Constant.RERANK_URL;
     private static final String MODEL = "qwen3-rerank";
     private static final Gson GSON = new Gson();
     private static final OkHttpClient HTTP = new OkHttpClient();
@@ -34,7 +35,7 @@ public class AliyunRerankDemo {
 
         Request request = new Request.Builder()
                 .url(RERANK_URL)
-                .addHeader("Authorization", "Bearer " + API_KEY)
+                .addHeader("Authorization", "Bearer " + Constant.ALIBAILIAN_API_KEY)
                 .addHeader("Content-Type", "application/json")
                 .post(RequestBody.create(GSON.toJson(body), MediaType.parse("application/json")))
                 .build();

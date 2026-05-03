@@ -1,5 +1,6 @@
 package com.cc.personal.llmapidemo.chatdemo;
 
+import com.cc.personal.llmapidemo.constant.Constant;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -13,8 +14,8 @@ import java.util.concurrent.TimeUnit;
 
 public class StreamingChat {
 
-    private static final String API_URL = "https://token-plan-cn.xiaomimimo.com/v1/chat/completions";
-    private static final String API_KEY = "tp-c5hnu1zqjqmmw4p1gvamrfdr7bgx6ylt78npeejop8x4ema0";
+    private static final String API_URL = Constant.LLM_API_URL;
+    private static final String API_KEY = Constant.LLM_API_KEY;
 
     public static void main(String[] args) throws IOException {
         // 1. 构建请求体（注意 stream 设为 true）

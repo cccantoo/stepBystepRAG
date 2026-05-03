@@ -1,5 +1,6 @@
 package com.cc.personal.llmapidemo.milvusdemo;
 
+import com.cc.personal.llmapidemo.constant.Constant;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -21,8 +22,8 @@ import io.milvus.v2.service.vector.request.SearchReq;
 import io.milvus.v2.service.vector.response.SearchResp;
 public class MilvusInsertDemo {
 
-    private static final String EMBEDDING_API_KEY = "sk-31f62dc869f14c1686c2e933acd65aa4";
-    private static final String EMBEDDING_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings";
+    private static final String EMBEDDING_API_KEY = Constant.ALIBAILIAN_API_KEY;
+    private static final String EMBEDDING_URL = Constant.EMBEDDING_API_URL;
     private static final String EMBEDDING_MODEL = "text-embedding-v3";
     private static final Gson GSON = new Gson();
     private static final OkHttpClient HTTP_CLIENT = new OkHttpClient();

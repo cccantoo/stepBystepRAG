@@ -1,6 +1,7 @@
 package com.cc.personal.llmapidemo.hybrid;
 
 import cn.hutool.core.collection.CollUtil;
+import com.cc.personal.llmapidemo.constant.Constant;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -52,10 +53,10 @@ public class MilvusHybridSchemaDemo {
     private static final String COLLECTION = "customer_service_hybrid";
 
     /** 阿里云DashScope API Key，用于调用Embedding模型 */
-    private static final String ALIYUN_API_KEY = "sk-31f62dc869f14c1686c2e933acd65aa4";
+    private static final String ALIYUN_API_KEY = Constant.ALIBAILIAN_API_KEY;
 
     /** Embedding API地址（OpenAI兼容格式） */
-    private static final String EMBEDDING_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings";
+    private static final String EMBEDDING_URL = Constant.EMBEDDING_API_URL;
 
     /** 使用的Embedding模型名称，输出1024维向量 */
     private static final String EMBEDDING_MODEL = "text-embedding-v3";
