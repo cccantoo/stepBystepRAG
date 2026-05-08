@@ -10,11 +10,16 @@ public class Constant {
     // LLM url
     public static final String LLM_API_URL = "https://token-plan-cn.xiaomimimo.com/v1/chat/completions";
 
+    // 小LLM url 通过alibailian调用
+    public static final String Q_LLM_API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
+    public static final String Q_MODEL_NAME = "qwen2.5-7b-instruct";
+
+
     //embedding url
     public static final String EMBEDDING_API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/embeddings";
     // 重排序url
     public static final String RERANK_URL = "https://dashscope.aliyuncs.com/compatible-api/v1/reranks";
-
+    // 小chat模型的modelname 通过阿里调用的千问一个2.5B的模型 可以用于指令重写等地方
 
 
 }
